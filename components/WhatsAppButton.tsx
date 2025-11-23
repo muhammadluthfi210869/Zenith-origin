@@ -1,0 +1,32 @@
+import React from 'react';
+import { MessageCircle } from 'lucide-react';
+
+const WhatsAppButton: React.FC = () => {
+    const phoneNumber = '62881023221414'; // Format internasional (tanpa +)
+    const message = encodeURIComponent('Halo Mas Luthfi! Saya tertarik dengan layanan Zenith Studio.');
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+    return (
+        <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="fixed bottom-6 left-6 z-50 p-4 bg-[#25D366] text-white rounded-full shadow-2xl hover:bg-[#20BA5A] hover:scale-110 transition-all duration-300 group"
+            aria-label="Chat via WhatsApp"
+        >
+            <MessageCircle size={28} className="group-hover:rotate-12 transition-transform" />
+
+            {/* Notification badge */}
+            <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse"></span>
+
+            {/* Tooltip */}
+            <div className="absolute left-full ml-4 top-1/2 -translate-y-1/2 bg-neutral-900 text-white px-4 py-3 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
+                <span className="font-semibold block mb-1">Consult with The Architect (Luthfi)</span>
+                <span className="text-xs text-neutral-400">Saya Luthfi. Di era AI, sentuhan manusia makin mahal. Saya menerjemahkan visi Anda menjadi sistem yang tidak bisa ditawar.</span>
+                <div className="absolute right-full top-1/2 -translate-y-1/2 border-8 border-transparent border-r-neutral-900"></div>
+            </div>
+        </a>
+    );
+};
+
+export default WhatsAppButton;
