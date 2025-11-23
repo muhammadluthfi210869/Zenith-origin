@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Hero from './components/Hero';
@@ -20,18 +19,6 @@ export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [chatInitialMessage, setChatInitialMessage] = useState<string>('');
-=======
-import React from 'react';
-import { Menu, X } from 'lucide-react';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Calculator from './components/Calculator';
-import Process from './components/Process';
-import Studio from './components/Studio';
-
-export default function App() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault(); // Mencegah navigasi URL yang menyebabkan error "refused to connect"
@@ -42,7 +29,6 @@ export default function App() {
     setIsMenuOpen(false);
   };
 
-<<<<<<< HEAD
   // Auto-open chatbot after 4 seconds
   React.useEffect(() => {
     const timer = setTimeout(() => {
@@ -61,20 +47,10 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
           <div
             className="text-2xl font-serif tracking-widest text-luxury-gold cursor-pointer hover:text-white transition-colors duration-500"
-=======
-  return (
-    <div className="min-h-screen bg-luxury-bg text-luxury-text font-sans selection:bg-luxury-gold selection:text-black overflow-x-hidden">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-luxury-bg/80 backdrop-blur-md border-b border-luxury-border">
-        <div className="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-          <div 
-            className="text-2xl font-serif tracking-widest text-luxury-gold cursor-pointer"
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
             ZENITH
           </div>
-<<<<<<< HEAD
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-xs font-medium tracking-[0.2em] text-neutral-400">
@@ -93,62 +69,23 @@ export default function App() {
               href="#estimate"
               onClick={(e) => handleScroll(e, 'estimate')}
               className="px-8 py-3 border border-luxury-gold/50 text-luxury-gold hover:bg-luxury-gold hover:text-black transition-all duration-500 tracking-[0.2em]"
-=======
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8 text-sm font-light tracking-widest text-neutral-400">
-            <a 
-              href="#collections" 
-              onClick={(e) => handleScroll(e, 'collections')}
-              className="hover:text-luxury-gold transition-colors duration-300"
-            >
-              COLLECTIONS
-            </a>
-            <a 
-              href="#process" 
-              onClick={(e) => handleScroll(e, 'process')}
-              className="hover:text-luxury-gold transition-colors duration-300"
-            >
-              PROCESS
-            </a>
-            <a 
-              href="#studio" 
-              onClick={(e) => handleScroll(e, 'studio')}
-              className="hover:text-luxury-gold transition-colors duration-300"
-            >
-              STUDIO
-            </a>
-            <a 
-              href="#estimate" 
-              onClick={(e) => handleScroll(e, 'estimate')}
-              className="px-6 py-2 border border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-black transition-all duration-300"
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
             >
               INQUIRE
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
-<<<<<<< HEAD
           <button
             className="md:hidden text-luxury-text hover:text-luxury-gold transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-=======
-          <button 
-            className="md:hidden text-luxury-text"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <X /> : <Menu />}
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-<<<<<<< HEAD
           <div className="md:hidden bg-luxury-bg/95 backdrop-blur-xl border-b border-luxury-border animate-fade-in absolute w-full">
             <div className="flex flex-col px-6 py-12 gap-8 text-center">
               {['PROCESS', 'STUDIO', 'ESTIMATE'].map((item) => (
@@ -162,38 +99,6 @@ export default function App() {
                   {item === 'ESTIMATE' ? 'INQUIRE' : item}
                 </a>
               ))}
-=======
-          <div className="md:hidden bg-neutral-900 border-b border-luxury-border">
-            <div className="flex flex-col px-6 py-8 gap-6 text-center">
-              <a 
-                href="#collections" 
-                onClick={(e) => handleScroll(e, 'collections')}
-                className="text-neutral-300 hover:text-luxury-gold"
-              >
-                COLLECTIONS
-              </a>
-              <a 
-                href="#process" 
-                onClick={(e) => handleScroll(e, 'process')}
-                className="text-neutral-300 hover:text-luxury-gold"
-              >
-                PROCESS
-              </a>
-              <a 
-                href="#studio" 
-                onClick={(e) => handleScroll(e, 'studio')}
-                className="text-neutral-300 hover:text-luxury-gold"
-              >
-                STUDIO
-              </a>
-              <a 
-                href="#estimate" 
-                onClick={(e) => handleScroll(e, 'estimate')}
-                className="text-neutral-300 hover:text-luxury-gold"
-              >
-                INQUIRE
-              </a>
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
             </div>
           </div>
         )}
@@ -202,7 +107,6 @@ export default function App() {
       <main className="pt-20">
         <Hero />
         <Features />
-<<<<<<< HEAD
         <PricingSlider />
         <ProcessAndMaintenance />
         <div id="process">
@@ -227,8 +131,6 @@ export default function App() {
       />
       <WhatsAppButton />
 
-      <WhatsAppButton />
-
       <MeetTheArchitect />
 
       <footer className="py-20 text-center border-t border-white/5 mt-20 bg-neutral-950 relative overflow-hidden">
@@ -245,18 +147,6 @@ export default function App() {
             &copy; 2024 Crafted for Excellence. All Rights Reserved.
           </p>
         </div>
-=======
-        <Process />
-        <Studio />
-        <Calculator />
-      </main>
-
-      <footer className="py-12 text-center border-t border-luxury-border mt-20 bg-neutral-950">
-        <div className="mb-4 text-xl font-serif text-luxury-gold">ZENITH INTERIORS</div>
-        <p className="text-neutral-500 text-xs tracking-widest">
-          &copy; 2024 CRAFTED FOR EXCELLENCE. ALL RIGHTS RESERVED.
-        </p>
->>>>>>> 8dbcbe6c1cbc0e16e5b3867431a61bec1bc548e6
       </footer>
     </div>
   );
